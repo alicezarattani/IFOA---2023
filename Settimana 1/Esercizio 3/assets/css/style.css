@@ -1,0 +1,57 @@
+header {
+  text-align: center;
+}
+
+main {
+  width: 45vw;
+  margin: 0 auto;
+}
+
+#logo img {
+  width: 15%;
+}
+
+#title {
+  text-align: center;
+}
+#punchline {
+  padding: 1em;
+  border-top: solid thin #cb9c2e;
+  color: #004d4c;
+  background-color: #fdfbf1;
+}
+
+#focaccia {
+  text-align: center;
+}
+#focaccia img {
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px grey;
+}
+
+#focaccia figcaption {
+  color: gray;
+}
+
+.list {
+  border-bottom: solid thin #bef3f3;
+  padding-bottom: 15px;
+}
+
+#feature {
+  text-transform: uppercase;
+  color: #b5460f;
+  border-left: solid 2px #ffd877;
+}
+
+#feature p {
+  margin-left: 20px;
+}
+
+#link {
+  text-transform: capitalize;
+}
+
+li {
+  padding: 5px;
+}

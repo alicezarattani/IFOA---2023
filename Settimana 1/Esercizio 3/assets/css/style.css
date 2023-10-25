@@ -7,12 +7,17 @@ main {
   margin: 0 auto;
 }
 
+html {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 #logo img {
   width: 15%;
 }
 
 #title {
   text-align: center;
+  font-size: 2em;
 }
 #punchline {
   padding: 1em;
@@ -22,8 +27,9 @@ main {
 }
 
 #focaccia {
-  text-align: center;
+  margin: auto;
 }
+
 #focaccia img {
   border-radius: 10px;
   box-shadow: 3px 3px 7px grey;
@@ -31,6 +37,7 @@ main {
 
 #focaccia figcaption {
   color: gray;
+  text-align: center;
 }
 
 .list {

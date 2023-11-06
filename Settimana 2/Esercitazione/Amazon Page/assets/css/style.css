@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.blue {
+  color: #1b6877;
+}
+
+.bigTopStripe,
+.bigLowerStripe {
+  background-color: #222f3f;
+}
+
+.littleTopStripe,
+.littleLowerStripe,
+.orangeStripe {
+  background-color: #364759;
+  height: 33px;
+  margin: -1em;
+  padding: 1vw;
+  color: white;
+}
+
+.navbar {
+  display: inline-block;
+  font-size: 21px;
+  margin: 0.5em;
+}
+
+#logo {
+  width: 9.5rem;
+  padding: 22px;
+}
+
+.orangeStripe {
+  text-align: center;
+  background-color: #f66502;
+  font-size: 21px;
+  margin-top: 3em;
+  padding: 2px;
+}
+
+.littleLowerStripe {
+  text-align: center;
+}
+
+.bigLowerStripe {
+  text-align: center;
+  padding: 5vw;
+}
+
+#backTop {
+  color: white;
+}
+
+#logoFooter {
+  width: 11rem;
+}

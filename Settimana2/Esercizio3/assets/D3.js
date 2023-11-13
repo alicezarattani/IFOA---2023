@@ -113,9 +113,13 @@ const characters = [];
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
 
-for (let i = 0; i < starWarsCharacters.length; i++) {
+for (
+  let i = 0;
+  i < starWarsCharacters.length /*partendo da 0, l'ultimo sarà il 9*/;
+  i++
+) {
   characters[i] = starWarsCharacters[i].name;
-  /*ALTERNATIVA characters.push(starWarsCharacters[i].name);*/
+  /*ALTERNATIVA characters.push(starWarsCharacters[i].name); -> push ha la specifica di inserirlo in coda*/
 }
 console.log(characters);
 
@@ -126,7 +130,7 @@ console.log(characters);
 const femaleCharacters = [];
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  if (starWarsCharacters[i].gender === "female") {
+  if (starWarsCharacters[i].gender /**/ === "female") {
     femaleCharacters.push(starWarsCharacters[i]);
     /* ALTERNATIVA femaleCharacters[i] = starWarsCharacters[i].name  */
   }
@@ -152,7 +156,9 @@ let eyeColor = {
 */
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  switch (starWarsCharacters[i].eye_color) {
+  let color = starWarsCharacters[i].eye_color;
+
+  switch (color) {
     case "blue":
       eyeColor.blue.push(starWarsCharacters[i]);
       break;
@@ -183,7 +189,10 @@ console.log(eyeColor);
 let conta = 0; /* indice, contatore che parte da zero a zero*/
 let crewMass = 0;
 
-while (conta < starWarsCharacters.length) {
+while (
+  /* con while la condizione viene verificata e poi esegue il ciclo */ conta <
+  starWarsCharacters.length
+) {
   crewMass +=
     starWarsCharacters[conta]
       .mass; /*-> aggiungi a crewmass la massa che trovi e poi incrementa il contatore*/
@@ -203,13 +212,13 @@ console.log(crewMass);
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
-if (crewMass > 1000) {
+if (crewMass >= 1000) {
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!");
-} else if (crewMass > 900) {
+} else if (crewMass >= 900) {
   console.log("Critical Load: Over 900");
-} else if (crewMass > 700) {
+} else if (crewMass >= 700) {
   console.log("Warning: Load is over 700");
-} else if (crewMass > 500) {
+} else if (crewMass >= 500) {
   console.log("Ship is half loaded");
 } else {
   console.log("Ship is under loaded");
@@ -257,7 +266,7 @@ for (let i = 0; i < characters.length; i++) {
   for (let j = 0; j < femaleCharacters.length; j++) {
     if (femaleCharacters[j].name === characters[i]) {
       characters.splice(
-        i,
+        /*se usi slice non modifichi l'array origniale, con splice sì*/ i,
         1
       ); /* <- da quale li devo eliminare? da i, quanti? 1*/
     }
@@ -269,3 +278,10 @@ console.log("Array characters dopo l'eliminazione: ", characters.length);
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+let randomNumber = Math.floor(Math.random() + starWarsCharacters.length);
+let selectedCharacter = starWarsCharacters[randomNumber];
+
+`The selected character is: ${selectedCharacter.name}. It's ${selectedCharacter.height}cm and it weights ${selectedCharacter.mass} pounds. Its hair is ${selectedCharacter.hair_color}, its skin is ${selectedCharacter.skin_color} and its eyes are ${selectedCharacter.eye_color}.
+It's born in ${selectedCharacter.birth_year} and its gender is ${selectedCharacter.gender}`;
+
+/* il backtick permette di unire le stringhe e con il ${} inserisci le proprietà degli oggetti dell'array*/

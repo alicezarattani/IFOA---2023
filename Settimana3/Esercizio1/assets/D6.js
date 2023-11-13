@@ -19,7 +19,7 @@ function tenElements() {
   const casualNumber = [];
   for (let i = 0; i < 10; i++) {
     casualNumber.push(Math.floor(Math.random() * 101));
-  }
+  } /* Math. è un oggetto-libreria con i suoi metodi -> così come console.log sono funzioni, se così si può dire precostituite*/
   return casualNumber;
 }
 
@@ -42,6 +42,7 @@ console.log(numeriRandom());*/
 */
 
 function valoriPari(array) {
+  /* potremmo scrivere anche: const valoriPari = (array) => {} */
   return array.filter((el) => el % 2 === 0);
 }
 

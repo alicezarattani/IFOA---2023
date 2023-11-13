@@ -12,7 +12,7 @@ changeTitle();
      */
 
 const addClassToTitle = function () {
-  document.querySelector("h1").className = "myHeading";
+  document.querySelector("h1").classList.add("myHeading");
 };
 
 addClassToTitle();
@@ -22,9 +22,11 @@ addClassToTitle();
        */
 
 const changePcontent = function () {
-  document.querySelectorAll("div p").forEach((paragraph) => {
-    paragraph.innerText = "Paragrafo";
-  });
+  document
+    .querySelectorAll("div p")
+    .forEach((paragraph /*è la nostra nodeList, cioè un array*/) => {
+      paragraph.innerText = "Paragrafo";
+    });
 };
 
 changePcontent();
@@ -33,7 +35,14 @@ changePcontent();
         Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
        */
 
-const changeUrls = function () {};
+const changeUrls = function () {
+  const links = document.querySelectorAll("a:not(footer a)");
+  links.forEach((element) => {
+    element.setAttribute("href", "https://www.google.it");
+  });
+};
+
+changeUrls();
 
 /* ESERCIZIO 5
         Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata

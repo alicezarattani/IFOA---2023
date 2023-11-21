@@ -59,6 +59,10 @@ me.skills = ["HTML", "JAVASCRIPT"];
 console.log("Esercizio E");
 console.log(me);
 
+
+
+
+
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */

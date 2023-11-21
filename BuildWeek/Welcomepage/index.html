@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome page</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="assets/img/epicode_logo.png"
+        alt="logo"
+        title="logoEpicode"
+        id="logo"
+      />
+    </header>
+    <div id="container">
+      <main>
+        <h1>Welcome to <br /><span class="bolder">your exam</span></h1>
+        <div id="pippo">
+          <div id="top">
+            <h2 id="instructions">Instructions</h2>
+            <p>
+              We don't expect most engineers to know the answers to all of these
+              questions, so don't worry if you're unsure of a few of them.
+            </p>
+            <ul id="list">
+              <li>
+                Each question is <span class="bolder">timed</span> and can only
+                be
+                <span class="bolder">answered once.</span>
+              </li>
+              <li>
+                Changing browser tab or opening other windows will
+                <span class="bolder">invalidate the question.</span>
+              </li>
+              <li>
+                This exam will take approx.
+                <span class="bolder">0-5 minutes.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <form>
+          <label class="labelContainer"
+            >I promise to answer myself without help from anyone
+            <input type="checkbox" id="checkbox" onclick="checkCheckbox()" />
+            <span class="checkmark"></span>
+          </label>
+          <button id="button" type="button" disabled>PROCEED</button>
+        </form>
+      </main>
+    </div>
+    <script src="assets/javascript/script.js"></script>
+  </body>
+</html>

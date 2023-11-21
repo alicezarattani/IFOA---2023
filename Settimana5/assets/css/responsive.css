@@ -21,8 +21,12 @@
   table {
     margin: 7rem auto;
   }
+  button {
+    padding: 1em 2em;
+  }
 
   input {
+    padding: 1.5rem;
     width: 70%;
   }
 }

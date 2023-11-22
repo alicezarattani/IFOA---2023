@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,50 +8,57 @@
   </head>
   <body>
     <header>
+      <a href="index.html">
       <img
+        id="logo"
         src="assets/img/epicode_logo.png"
         alt="logo"
         title="logoEpicode"
-        id="logo"
       />
+    </a>
     </header>
+
     <div id="container">
-      <main>
-        <h1>Welcome to <br /><span class="bolder">your exam</span></h1>
-        <div id="pippo">
-          <div id="top">
-            <h2 id="instructions">Instructions</h2>
+      <main id="welcomePage">
+        <h1 id="mainTitle">Welcome to <br /><b>your exam</b></h1>
+        <div id="top">
+         
+            <h2 id="Instruction">Instructions</h2>
             <p>
               We don't expect most engineers to know the answers to all of these
               questions, so don't worry if you're unsure of a few of them.
             </p>
-            <ul id="list">
+
+            <ul>
               <li>
-                Each question is <span class="bolder">timed</span> and can only
+                Each question is <b>timed</b> and can only
                 be
-                <span class="bolder">answered once.</span>
+                <b>answered once.</b>
               </li>
               <li>
                 Changing browser tab or opening other windows will
-                <span class="bolder">invalidate the question.</span>
+                <b>invalidate the question.</b>
               </li>
               <li>
                 This exam will take approx.
-                <span class="bolder">0-5 minutes.</span>
+                <b>0-5 minutes.</b>
               </li>
             </ul>
-          </div>
+          
         </div>
+
         <form>
           <label class="labelContainer"
             >I promise to answer myself without help from anyone
-            <input type="checkbox" id="checkbox" onclick="checkCheckbox()" />
+            <input type="checkbox" id="checkbox" onclick="checkCheckbox()"/>
+
             <span class="checkmark"></span>
           </label>
-          <button id="button" type="button" disabled>PROCEED</button>
+
+          <button id="proceedButton" type="button" disabled><b>PROCEED</b></button>
         </form>
       </main>
     </div>
-    <script src="assets/javascript/script.js"></script>
+    <script src="assets/js/script_welcome.js"></script>
   </body>
 </html>

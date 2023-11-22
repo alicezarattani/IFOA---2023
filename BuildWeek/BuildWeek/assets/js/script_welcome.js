@@ -1,7 +1,7 @@
 // Funzione che gestisce il collegamento tra checkbox e pulsante
 function checkCheckbox() {
   let checkbox = document.getElementById("checkbox");
-  let button = document.getElementById("button");
+  let button = document.getElementById("proceedButton");
 
   /* Abilita o disabilita il pulsante in base allo stato della checkbox*/
   if (checkbox.checked) {
@@ -13,10 +13,10 @@ function checkCheckbox() {
   }
 }
 
-document.getElementById("button").addEventListener("click", function () {
+document.getElementById("proceedButton").addEventListener("click", function () {
   let checkbox = document.getElementById("checkbox");
 
   if (checkbox.checked) {
-    window.location.href = "pagina_successiva.html";
+    window.location.href = "quiz.html";
   }
 });

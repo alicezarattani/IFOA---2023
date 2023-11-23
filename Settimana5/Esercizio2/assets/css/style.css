@@ -140,11 +140,13 @@ h1 {
   top: 90%;
   width: 100%;
   opacity: 50%;
+  z-index: -1;
 }
 
 #underline {
   position: relative;
   display: inline-block;
+  z-index: 0;
 }
 
 p,
@@ -212,10 +214,12 @@ h1 + p {
   padding: 3px;
   float: inline-start;
 }
+
 ul,
 ol {
   margin-left: 2em;
 }
+
 a {
   color: #00a0c6;
   font-weight: bold;

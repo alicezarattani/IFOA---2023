@@ -19,6 +19,7 @@ header {
   background-color: #ffc017;
   padding: 20px;
   border: solid thin;
+  width: 100%;
 }
 
 .logo {
@@ -38,6 +39,8 @@ nav {
   align-items: center;
   gap: 20%;
   padding: 3vh;
+  position: sticky;
+  top: 0;
 }
 
 a {

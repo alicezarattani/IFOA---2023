@@ -23,34 +23,46 @@
 
         <main>
 
+          <!-- Si apre il container fluid -->
             <div class="container-fluid">
+
+              <!-- Si apre il div row -->
                 <div class="row justify-content-center">
+
+                    <!-- Si apre il div col1 -->
                     <div class="col-4">
                       <p class="h1 text-light profile-title">Edit Profile</p>
                       <hr>  
 
-                    <div class="col-12 d-flex"><img class="img-fluid" width="150"
+                      <!-- Si apre il div col2 dentro al col1 -->
+                      <div class="col-11 d-flex">
+                        <img class="img-fluid" width="150"
                         src="assets/avatar.png" alt="avatar utente">
                         
-                        <div class="col"><input class="form-control ms-2 p-3 border-0 rounded-0 bg-secondary text-white fw-bold" type="text" value="Epicoder #1" aria-label="Username" aria-describedby="basic-addon">
+                        <!-- Si apre il div che contiene Username e language -->
+                        <div class="col">
+                        <input class="form-control ms-3 p-3 border-0 rounded-0 bg-secondary text-white fw-bold" type="text" value="Epicoder #1" aria-label="Username" aria-describedby="basic-addon">
+                        
                         <div>
-                        <p class="pt-3 ps-2 mb-0 text-muted">Language:</p>
-                        <button class="btn btn-outline-light mt-2 dropdown-toggle rounded-0 ms-2"><span
+                        <p class="pt-3 ms-3 mb-0 text-muted">Language:</p>
+                        <button class="btn btn-outline-light mt-2 ms-3 dropdown-toggle rounded-0"><span
                             class="pe-4">English</span></button>
                         </div>
+                        <!-- Si chiude il div che contiene Username e language -->
                         </div>
-                    
-                    </div>
-                    
-                    </div>
 
+                      <!-- Si chiude il div col2 dentro al col1 -->
+                      </div>
+
+                    <!-- Si chiude il div col1 -->
                     </div>
+                
+                <!-- Si chiude il div row -->
                 </div>
+              <!-- Si chiude il div container fluid-->
             </div>
 
-
-
-        </main>
+      </main>
 
     <!-- Elementi necessari:
          Titolo

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h2>Registrazione</h2>
+
+    <form id="registrationForm">
+      <div id="emptyDiv"></div>
+
+      <label for="name"
+        >Nome:<br />
+        <input id="name" type="text" name="name" autocomplete="given-name" />
+      </label>
+      <br /><br />
+
+      <input id="registrationButton" type="submit" value="Registrati" />
+      <input id="deleteButton" type="reset" value="Cancella dati" />
+    </form>
+
+    <h2 id="timer"></h2>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>

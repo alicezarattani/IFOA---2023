@@ -1,16 +1,21 @@
 const newTaskButton = document.querySelector("#newTaskBtn"); //assegnamento del risultato dell'espressione alla variabile newTaskButton
-const newTaskInput = document.querySelector("#new-task"); //recuperare l'input salvandolo all'interno di una variabile
+const newTaskInput = document.querySelector("#new-task"); //recuperare il riferimento all'input salvandolo all'interno di una variabile
 
-newTaskButton.addEventListener("click", stamp);
+newTaskButton.addEventListener("click", onButtonClick);
 
-function stamp() {
-  const newTaskText = newTaskInput.value;
-  console.log(newTaskText);
+function onButtonClick() {
+  const newTaskText = newTaskInput.value; //qui andremo a prendere il valore dentro all'input
+  aggiungiTask(newTaskText);
 }
 
-function aggiungiTask(stringa) {
-  //funzione che stamperà nel div toDo il valore del parametro stringa
+function aggiungiTask(stringa1) {
+  const todoDiv = document.querySelector("#toDo");
+
+  const par = document.createElement("p");
+  par.innerHTML = stringa1;
+
+  todoDiv.appendChild(par);
 }
 
-aggiungiTask("pluto");
-aggiungiTask("pippo");
+//prova a creare un array in cui salvare i vari task della lista
+//ogni volta che clicchi sul bottone viene aggiunto un altro task all'array e viene riscritta la lista

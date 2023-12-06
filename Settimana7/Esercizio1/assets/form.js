@@ -39,7 +39,6 @@ function displayPetList() {
     //per ogni pet viene creato un nuovo elemento div in cui vengono stampati i dettagli del pet
     const petItem = document.createElement("div");
     petItem.textContent = `Pet: ${pet.petName}, Owner: ${pet.ownerName}, Species: ${pet.species}, Breed: ${pet.breed}`;
-
     //l'elemento div viene aggiunto come elemento figlio all'elemento taskContainer -> gli elementi della petList verranno visualizzati nella taskContainer (i petItem)
     taskContainer.appendChild(petItem);
   });

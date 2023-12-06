@@ -1,4 +1,4 @@
-class User {
+/*class User {
   constructor(firstName, lastName, age, location) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -26,7 +26,7 @@ user1.compareAge(user2, user1);
 
 //---------------------------------------------------------------------------------------------------------------------//
 
-/*class User {
+class User {
   constructor(firstName, lastName, age, location) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -48,7 +48,7 @@ user1.compareAge(user2, user1);
 const user1 = new User("Francesco", "Garcia", 35, "Spain");
 const user2 = new User("John", "Wayne", 30, "USA");
 
-User.compareAge(user1, user2); // Chiamata diretta al metodo statico, legato alla classe e non all'istanza
+User.compareAge(user1, user2); // Chiamata diretta al metodo statico, legato alla classe e non all'istanza */
 
 //---------------------------------------------------------------------------------------------------------------------//
 
@@ -73,7 +73,7 @@ class User {
   }
 }
 
-const user1 = new User("Francesco", "Garcia", 35, "Spain");
-const user2 = new User("John", "Wayne", 30, "USA");
+user1 = new User("Francesco", "Garcia", 35, "Spain");
+user2 = new User("John", "Wayne", 30, "USA");
 
-user1.compareAgeWith(user2); // Chiamata del metodo sull'istanza user1 per confrontare le età*/
+user1.compareAgeWith(user2); // Chiamata del metodo sull'istanza user1 per confrontare le età -> la chiamo su un oggetto per compararlo all'altro

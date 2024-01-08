@@ -37,7 +37,7 @@ function postProduct(newProduct) {
     .then((response) => response.json())
     .then((data) => {
       console.log("Nuovo prodotto: ", data);
-      createCards();
+      createCards(data);
     })
     .catch((error) => alert(error));
 }
@@ -71,20 +71,20 @@ function createCards(products) {
 
   products.forEach((product) => {
     let newCard = `<div class="col-sm-4">
-            <div class="card">
-                <img class="card-img-top w-25" src="${product.imageUrl}" alt="Cellulare">
-                <div class="card-body">
-                    <h5 class="card-title">${product.name}</h5>
-                    <p class="card-text">${product.description}</p>
-                    <p class="card-text">$${product.price}</p>
-                </div>
-                <div class="card-footer d-flex justify-content-between">
-                    
-                    <a class="btn btn-primary" href="./details.html?${product._id}" >Dettagli</a>
-                    <a href="#" class="btn btn-danger">Modifica</a>
-                </div>
-            </div>
-        </div>`;
+              <div class="card">
+                  <img class="card-img-top w-25" src="${product.imageUrl}" alt="Cellulare">
+                  <div class="card-body">
+                      <h5 class="card-title">${product.name}</h5>
+                      <p class="card-text">${product.description}</p>
+                      <p class="card-text">$${product.price}</p>
+                  </div>
+                  <div class="card-footer d-flex justify-content-between">
+                      
+                      <a class="btn btn-primary" href="./details.html?id=${product._id}" >Dettagli</a>
+                      <a href="#" class="btn btn-danger">Modifica</a>
+                  </div>
+              </div>
+          </div>`;
     card.innerHTML += newCard;
   });
 }

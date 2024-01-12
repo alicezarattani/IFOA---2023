@@ -9,9 +9,8 @@ function Main() {
         <Titles titles="TV Shows" />
         <DropdownGeneri />
       </div>
-      <div>
-        <FilmGallery />
-      </div>
+
+      <FilmGallery />
     </>
   );
 }

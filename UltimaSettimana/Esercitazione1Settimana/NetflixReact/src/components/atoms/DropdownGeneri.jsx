@@ -1,15 +1,14 @@
 import Dropdown from "react-bootstrap/Dropdown";
-import AvatarImg from "./AvatarImg";
 
-function DropdownButtonCustom() {
+function DropdownGeneri() {
   return (
     <Dropdown>
       <Dropdown.Toggle
         variant="transparent"
-        className="text-light"
+        className="text-light border"
         id="dropdown-basic"
       >
-        <AvatarImg link="../src/assets/images/avatar.png" />
+        Genres
       </Dropdown.Toggle>
 
       <Dropdown.Menu className="dropdown-menu-end">
@@ -21,4 +20,4 @@ function DropdownButtonCustom() {
   );
 }
 
-export default DropdownButtonCustom;
+export default DropdownGeneri;

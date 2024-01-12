@@ -2,6 +2,8 @@ body {
   background-color: #191919;
 }
 
-.nascondi {
-  display: none;
+.gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  object-fit: cover;
 }

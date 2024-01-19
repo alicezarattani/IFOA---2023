@@ -1,0 +1,23 @@
+#root {
+  padding: 2px;
+  text-align: center;
+}
+
+.Container {
+  background-image: url("../src/assets/Images/sfondo-2.jpg");
+  background-size: 200wh;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+/* .Row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.next {
+  object-fit: cover;
+  width: 80px;
+  height: 60px;
+}

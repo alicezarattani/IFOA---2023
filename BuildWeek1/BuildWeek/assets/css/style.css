@@ -39,10 +39,11 @@ header {
   padding: 3% 8% 0 8%;
 }
 
-#top, #quiz, #question {
+#top,
+#quiz,
+#question {
   line-height: 1.5em;
 }
-
 
 #mainTitle {
   font-weight: 300;
@@ -141,9 +142,8 @@ form {
 }
 /*----------------------------------  QUIZ PAGE---------------------------------- */
 
-#questionProgress{
+#questionProgress {
   text-align: center;
-
 }
 
 #question {
@@ -152,12 +152,12 @@ form {
   height: 10vh;
 }
 
-#quizPage{
+#quizPage {
   text-align: center;
 
   padding-top: 3%;
   padding-bottom: 0;
-  padding-left:8%;
+  padding-left: 8%;
   padding-right: 8%;
 }
 
@@ -198,7 +198,7 @@ button:not(#nextButton):active {
   margin: 30px 0;
   border-radius: 0.1em;
   text-decoration: none;
-  
+
   color: #e7e7eb;
   text-align: center;
   transition: 0.4s;
@@ -214,29 +214,30 @@ button:not(#nextButton):active {
   font-weight: 400;
 }
 
-h2{
+h2 {
   font-size: 50px;
 }
 
 /*----------------------------------  FEEDBACK PAGE---------------------------------- */
 
-#feedbackPage, #quizPage{
+#feedbackPage,
+#quizPage {
   text-align: center;
 }
 
-h3{
-    font-weight: 400;
-    margin-top: 10px;
+h3 {
+  font-weight: 400;
+  margin-top: 10px;
 }
 
-#feedbackTitle{
-    margin-top: 0;
-    font-size: 60px;
+#feedbackTitle {
+  margin-top: 0;
+  font-size: 60px;
 }
 
 #moreInfo {
   background-color: transparent;
-  cursor:pointer;
+  cursor: pointer;
   display: block;
   margin: 20px auto;
   border: solid 2px;
@@ -247,57 +248,59 @@ h3{
   padding: 1% 5%;
 }
 
-#moreInfo:hover, #nextButton:hover, .rateButton:hover{
-  background-color: #06FDFF;
-  color: #0B113B;
-  box-shadow: rgba(0, 255, 255, 0.12) 0px 2px 30px 15px, rgba(0, 255, 255, 0.32) 0px 2px 30px 15px;
-  border: solid 2px #06FDFF;
+#moreInfo:hover,
+#nextButton:hover,
+.rateButton:hover {
+  background-color: #06fdff;
+  color: #0b113b;
+  box-shadow: rgba(0, 255, 255, 0.12) 0px 2px 30px 15px,
+    rgba(0, 255, 255, 0.32) 0px 2px 30px 15px;
+  border: solid 2px #06fdff;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.rating-box{
-    padding: 40px 50px;
+.rating-box {
+  padding: 40px 50px;
 }
 
-.rating-box .stars{
-    display: inline;
-    align-items: center;
-    gap: 25px;
+.rating-box .stars {
+  display: inline;
+  align-items: center;
+  gap: 25px;
 }
 
-.stars i{
-    color: #0c1447;
-    font-size: 50px;
-    cursor:pointer;
-    transition: color 0.2s ease;
+.stars i {
+  color: #0c1447;
+  font-size: 50px;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
 
-.stars i.active{
-    color: #06FDFF;
+.stars i.active {
+  color: #06fdff;
 }
-
 
 textarea {
-    width: 50%; 
-    height: 150px;
-    padding: 12px; 
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; 
-    margin-bottom: 16px; 
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-    background-color: transparent;
-    border: transparent;
-    border-bottom: 2px solid #C2168D;
-    color: #e7e7eb;
-    font-family: "Outfit", sans-serif;
-    font-size: 18px;
-    overflow:hidden;
-  }
+  width: 50%;
+  height: 150px;
+  padding: 12px;
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: transparent;
+  border: transparent;
+  border-bottom: 2px solid #c2168d;
+  color: #e7e7eb;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  overflow: hidden;
+}
 
 textarea::placeholder {
-    font-family: "Outfit", sans-serif;
-    font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
 }

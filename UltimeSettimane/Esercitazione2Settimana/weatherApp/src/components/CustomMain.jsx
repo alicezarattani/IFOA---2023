@@ -12,40 +12,78 @@ import Rain_Icon from "../assets/Images/Icons/Rain.png";
 import Wind_Icon from "../assets/Images/Icons/wind.png";
 import Humidity_Icon from "../assets/Images/Icons/humidity.png";
 
+// function CustomMain() {
+//   const location = useLocation;
+//   const searchTerms = new URLSearchParams(location.search).get("search");
+//   const [city, setCity] = useState([]);
+//   const url = `https://api.openweathermap.org/data/2.5/weather?q=London&units=Metric&APPID=${api_key}`;
+//   const api_key = "9ee9ec75bc4456a2833c239c07fd0f60";
+
+//   const fetchData = async () => {
+//     try {
+//       let response = await fetch(url);
+//       if (response.ok) {
+//         let data = await response.json();
+//         console.log(data);
+//         if (data.Search) {
+//           setCity(data.Search);
+//         }
+//       } else {
+//         console.log("Errore nella risposta dell'API");
+//       }
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
+
+//   useEffect(() => {
+//     if (searchTerms && searchTerms.length > 2) {
+//       fetchData();
+//     }
+//   }, []);
+
+// ALTERNATIVA DA PROVARE
+//  useEffect(() => {
+//    if(search?.length >2)
+//      fetchData()
+//    }, [search])
+
+//inizia il mio tentativo di fare la chiamata seguendo il video su youtube
 function CustomMain() {
-  const location = useLocation;
-  const searchTerms = new URLSearchParams(location.search).get("search");
-  const [city, setCity] = useState([]);
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=London&units=Metric&APPID=${api_key}`;
+  const [data, setData] = useState({});
+  const [location, setLocation] = useState("");
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=Metric&APPID=${api_key}`;
   const api_key = "9ee9ec75bc4456a2833c239c07fd0f60";
 
-  const fetchData = async () => {
-    try {
-      let response = await fetch(url);
-      if (response.ok) {
-        let data = await response.json();
+  const searchLocation = () => {
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Errore nella risposta dell'API");
+        }
+        return response.json();
+      })
+      .then((data) => {
         console.log(data);
         if (data) {
-          setCity(data);
+          setData(data);
         }
-      } else {
-        console.log("Errore nella risposta dell'API");
-      }
-    } catch (error) {
-      console.log(error);
-    }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
-  useEffect(() => {
-    if (searchTerms && searchTerms.length > 2) {
-      fetchData();
-    }
-  }, []);
+  const handleSearch = () => {
+    // Chiamare la funzione searchLocation quando l'utente cerca
+    searchLocation();
+  };
 
   return (
+    //inizia il codice che dovrebbe essere stabile e funzionante
     <>
       <div>
-        <h1>{city.name}</h1>
+        <h1>{data.name}</h1>
         <p>Data</p>
       </div>
       <Container>

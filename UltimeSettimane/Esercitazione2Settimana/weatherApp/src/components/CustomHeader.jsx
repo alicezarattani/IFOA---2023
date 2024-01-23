@@ -39,9 +39,14 @@ import Search_Icon from "../assets/Images/Icons/search.png";
 function Header() {
   return (
     <>
-      <input type="text" placeholder="Inserisci la città" />
-      <img src={Search_Icon} alt="Search Icon"></img>
+      <input
+        type="text"
+        placeholder="Inserisci la città"
+        value={location}
+        onChange={(e) => setLocation(e.target.value)}
+      />
+      <img onClick={handleSearch} src={Search_Icon} alt="Search Icon"></img>
     </>
-  );
+  ); //funzioni che vanno create e richiamate da qualche parte
 }
 export default Header;

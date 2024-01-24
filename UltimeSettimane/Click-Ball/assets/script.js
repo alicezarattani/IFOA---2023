@@ -7,7 +7,7 @@ let startSpeed = 18;
 const posYStart = -50;
 const posXstart = -130;
 const maxLost = 5;
-// const audio = new Audio("boom.wav");
+const audio = new Audio("boom.wav");
 
 function gestPoints() {
   /*ogni volta che la palla viene cliccata dovrà aumentare il punteggio*/
